@@ -4,23 +4,23 @@ import Input from './input';
 import Content from './content';
 
 const INITIAL_STATE = {
-    'color': '',
-    'pluralNoun': '',
-    'adjectiveOne': '',
-    'celebOne': '',
-    'adjectiveTwo': '',
-    'nounOne': '',
-    'numberOne': '',
-    'numberTwo': '',
-    'nounTwo': '',
-    'adjectiveThree':'',
-    'celebTwo': '',
-    'celebThree':'',
-    'adjectiveFour': '',
-    'nounThree': '',
-    'celebFour': '',
-    'adjectiveFive': '',
-    'contentVisible': false
+    color: '',
+    pluralNoun: '',
+    adjectiveOne: '',
+    celebOne: '',
+    adjectiveTwo: '',
+    nounOne: '',
+    numberOne: '',
+    numberTwo: '',
+    nounTwo: '',
+    adjectiveThree:'',
+    celebTwo: '',
+    celebThree:'',
+    adjectiveFour: '',
+    nounThree: '',
+    celebFour: '',
+    adjectiveFive: '',
+    contentVisible: false
 }
 
 class Card extends Component {
