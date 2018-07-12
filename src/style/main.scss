@@ -67,9 +67,10 @@
 
     display: grid;
     grid-template-rows: 1fr 50px;
+    // background-color: #eaebed;
+    background-color: white;
 
     &__inputs {
-        background-color: #eaebed;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
@@ -78,7 +79,7 @@
         align-items: center;
         
         input {
-            background-color: rgb(192, 221, 229);
+            // background-color: rgb(247, 253, 255);
         }
     }
 }
