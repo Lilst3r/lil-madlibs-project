@@ -1,18 +1,49 @@
 .home {
-    background-color: #eaebed;
+    position: relative;
+
+    // background-color: #eaebed;
     display: grid;
 
     justify-items: center;
-    align-items: center;
+    // align-items: center;
     grid-template-rows: [header-s] 218px [header-e card-s] minmax(736px, 994px) [card-e];
 }
 
 .header {
     align-self: center;
+
+    &__skew {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        
+        z-index: -1;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: #444444;
+        
+    }
+
+    &__border {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
+        
+        z-index: -1;
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: 110vh;
+        width: 100vw;
+        background-color: rgb(192, 221, 229);;
+        
+    }
 }
 
 .card {
-    height: 736px;
+    min-height: 736px;
+    max-height: 994px;
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, .15);
     border-radius: 7px;
@@ -21,7 +52,7 @@
     grid-template-rows: 1fr 50px;
 
     &__inputs {
-        background-color: skyblue;
+        background-color: #eaebed;
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
@@ -37,18 +68,18 @@
 
 .input {
     display: grid;
-    //grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: [number-s] 26fr [number-e input-s] 1fr; [input-e]
+    grid-template-rows: 1fr 1fr 1fr;
+    // grid-template-columns: [number-s] 26fr [number-e input-s] 1fr; [input-e]
 
     &__title {
-        grid-column: input-s/input-e;
+        grid-column: 2/3 // input-s/input-e;
     }
 
     input {
-        grid-column: input-s/input-e;
+        grid-column: 2/3 // input-s/input-e;
     }
 
     &__number {
-        grid-column: number-s/number-e;
+        grid-column: 1/2 //number-s/number-e;
     }
 }

@@ -35,7 +35,7 @@ class Card extends Component {
     }
 
     handleInputChange(event) {
-        this.setState({ [event.target.name]: event.target.value})
+        this.setState({ [event.target.name]: event.target.value })
     }
 
     handleFormSubmit (event) {
@@ -74,11 +74,11 @@ class Card extends Component {
                 <div className="card__inputs">
                 {
                     inputData.map((data, index) => { 
-                        return Input( (data), this.handleInputChange ) 
+                        return Input( (data), this.handleInputChange, index ) 
                     })
                 }
                 </div>
-                <button type="submit">{!this.state.contentVisible ? 'Generate MadLib' : 'Clear MadLib'}</button>
+                <button className={`card__${!this.state.contentVisible ? 'generate': 'clear'}`} type="submit">{!this.state.contentVisible ? 'Generate MadLib' : 'Clear MadLib'}</button>
                 {
                     this.state.contentVisible ? <Content data={this.state}/> : ''
                 }
