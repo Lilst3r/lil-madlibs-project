@@ -39,7 +39,8 @@
         position: absolute;
         height: 110vh;
         width: 100vw;
-        background-color: rgb(192, 221, 229);;
+        // background-color: rgb(192, 221, 229);
+        background-color: rgb(166, 241, 231);
         
     }
 
@@ -89,15 +90,40 @@
     grid-template-rows: 1fr 1fr 1fr;
     // grid-template-columns: [number-s] 26fr [number-e input-s] 1fr; [input-e]
 
+    font-family: 'Montserrat';
+    text-align: center;
+
     &__title {
-        grid-column: 2/3 // input-s/input-e;
+        grid-column: 2/3; // input-s/input-e;
+
+        border-top: 1px solid #B3B3B3;
+        color: #B3B3B3;
+        font-size: 12px;
+        font-weight: 300;
     }
 
     input {
-        grid-column: 2/3 // input-s/input-e;
+        grid-column: 2/3; // input-s/input-e;
+
+        border: none;
+        text-align: center;
+        font-size: 15px;
+        // width: 190px;
+        // height: 40px;
     }
 
     &__number {
-        grid-column: 1/2 //number-s/number-e;
+        grid-column: 1/2; //number-s/number-e;
+
+        background-color: rgb(166, 241, 231);
+        color: navy;
+        font-size: 20px;
+        line-height: 24px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 7px;
+        padding-right: 7px;
+
+        border-radius: 50%;
     }
 }
