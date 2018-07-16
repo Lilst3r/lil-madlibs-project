@@ -8,6 +8,14 @@
     text-align: center;
 }
 
+.gray {
+    background: #B3B3B3;
+}
+
+.green {
+    background: rgb(166, 241, 231);
+}
+
 .home {
     position: relative;
 
@@ -75,6 +83,7 @@
     width: 1240px;
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, .15);
     border-radius: 7px;
+    display: inline-block;
 
     display: grid;
     grid-template-rows: 1fr 50px;
@@ -127,6 +136,19 @@
         justify-self: center;
         margin-bottom: 84px;
         
+        &__label {
+            height: 18px;
+            width: 18px;
+            line-height: 22px;
+            background-color: black;
+            border-radius: 50%;
+            font-size: 14px;
+            text-align: center;
+            color: white;
+            // padding-top: 3px;
+            display: inline-block;
+            margin: 4px;
+        }
         
         p {
             line-height: 29px;
@@ -182,7 +204,6 @@
     &__number {
         grid-column: 1/2; //number-s/number-e;
 
-        background-color: rgb(166, 241, 231);
         color: navy;
         font-size: 20px;
         line-height: 24px;
