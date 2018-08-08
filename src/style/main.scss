@@ -19,7 +19,7 @@
 .home {
     position: relative;
 
-    // background-color: #eaebed;
+    background-color: rgba(207, 207, 207, 0.06);
     display: grid;
 
     justify-items: center;
@@ -37,7 +37,7 @@
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
         clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
         
-        z-index: -1;
+        z-index: -10;
         top: 0;
         left: 0;
         position: absolute;
@@ -51,7 +51,7 @@
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
         clip-path: polygon(0 48%, 100% 23%, 100% 25%, 0 50%);
         
-        z-index: -1;
+        z-index: -10;
         top: 0;
         left: 0;
         position: absolute;
@@ -86,7 +86,6 @@
 
     display: grid;
     grid-template-rows: 1fr 50px;
-    // background-color: #eaebed;
     background-color: white;
 
     &__inputs {
@@ -101,10 +100,6 @@
 
         justify-items: center;
         align-items: center;
-        
-        input {
-            // background-color: rgb(247, 253, 255);
-        }
     }
 
     button:focus {
@@ -113,12 +108,11 @@
 
     button {
         justify-self: center;
-        transform: translateY(50%);
     }
 
     &__generate {
         background-color: rgb(166, 241, 231);
-        transform: translateY(-30px);
+        transform: translateY(-350px);
         @include button;
     }
 
@@ -130,7 +124,7 @@
     }
 
     &__content {
-        width: 110px;
+        width: 1100px;
         height: 297px;
         background-color: #F2F2F2;
 
@@ -162,6 +156,10 @@
             font-weight: 300;
         }
     }
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
 .input {
@@ -201,7 +199,6 @@
         &:focus {
             outline: none;
             border-bottom: 1px solid rgb(166, 241, 231);
-            
         }
     }
 
